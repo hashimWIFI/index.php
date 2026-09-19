@@ -27,7 +27,7 @@ ini_set('display_errors', 1);
 $db_host = getenv('MYSQLHOST') ?: 'mysql.railway.internal';
 $db_port = getenv('MYSQLPORT') ?: '3306'; 
 $db_user = getenv('MYSQLUSER') ?: 'root';
-$db_pass = getenv('MYSQLPASSWORD') ?: 'uGMtUbozFJJSnBszScvdokEShYJWoMDn'; 
+$db_pass = getenv('MYSQLPASSWORD') ?: 'LHbSnoweXQpwdloncFlAgWQbSbCblvOi';
 $db_name = getenv('MYSQLDATABASE') ?: 'railway';
 
 // 2. CAPTURE DATA SENT FROM INDEX.PHP
