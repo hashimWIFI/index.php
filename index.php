@@ -4,9 +4,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-/**
- * GATEKEEPER 1: Ensure they have a valid mobile number in their request or session.
- */
+
 $mobileFromGet  = isset($_GET['customer_phone']) ? trim($_GET['customer_phone']) : null;
 $mobileFromPost = isset($_POST['customer_phone']) ? trim($_POST['customer_phone']) : null;
 $mobileFromSession = isset($_SESSION['user_mobile']) ? $_SESSION['user_mobile'] : null;
