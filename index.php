@@ -19,17 +19,6 @@ if (empty($activeMobile)) {
     header("Location: https://www.tanconnect.co.tz"); 
     exit();
 }
-/**
- * GATEKEEPER 2: Check if they just typed the URL directly.
- * If there is no HTTP_REFERER (meaning they typed it or used a bookmark),
- */
-if (!isset($_SERVER['HTTP_REFERER'])) {
-    header("Location: https://www.tanconnect.co.tz");
-    exit();
-}
-
-$_SESSION['user_mobile'] = $activeMobile;
-
 ?>
 
 <?php
