@@ -21,7 +21,7 @@ try {
     ]);
 
     // Query your table for the latest transaction stuck on the "Subiri Malipo" spinner state
-    $stmt = $pdo->query("SELECT transaction_id FROM vouchers WHERE status = 'assigned' ORDER BY assigned_at DESC LIMIT 1");
+    $stmt = $pdo->query("SELECT transaction_id FROM wifi_vouchers WHERE status = 'pending' ORDER BY purchased_at DESC LIMIT 1");
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if (!$row || empty($row['transaction_id'])) {
