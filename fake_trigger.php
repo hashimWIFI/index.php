@@ -7,7 +7,7 @@
 
 // 1. SETTINGS: Change this to match your Railway app domain or local setup
 
-$railway_webhook_url = "https://wi-fi-voucher-project-production.up.railway.app/callback.php";  
+$railway_webhook_url = "https://indexphp-production.up.railway.app/callback.php";  
 // 1b. DYNAMIC DATABASE LOOKUP (Finds the newest pending transaction automatically)
 $db_host = getenv('MYSQLHOST') ?: 'mysql.railway.internal';
 $db_port = getenv('MYSQLPORT') ?: '3306';
