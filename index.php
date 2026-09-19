@@ -9,10 +9,10 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="expires" content="-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
-<link rel="stylesheet" type="text/css" href="./SOL Hotspot _ Login_files/screen.css" media="screen">
-<link rel="stylesheet" type="text/css" href="./SOL Hotspot _ Login_files/media-queries.css"> 
-<script type="text/javascript" src="./SOL Hotspot _ Login_files/jquery-1.8.0.min.js.download"></script>
-<script type="text/javascript" src="./SOL Hotspot _ Login_files/login.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./screen.css" media="screen">
+<link rel="stylesheet" type="text/css" href="./media-queries.css"> 
+<script type="text/javascript" src="./jquery-1.8.0.min.js.download"></script>
+<script type="text/javascript" src="./login.js.download"></script>
 
     <style>
       body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; text-align: center; color: #2c3e50; }
