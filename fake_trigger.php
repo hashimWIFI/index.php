@@ -12,7 +12,7 @@ $railway_webhook_url = "https://indexphp-production.up.railway.app/callback.php"
 $db_host = getenv('MYSQLHOST') ?: 'mysql.railway.internal';
 $db_port = getenv('MYSQLPORT') ?: '3306';
 $db_user = getenv('MYSQLUSER') ?: 'root';
-$db_pass = getenv('MYSQLPASSWORD') ?: 'uGMtUbozFJJSnBszScvdokEShYJWoMDn';
+$db_pass = getenv('MYSQLPASSWORD') ?: 'LHbSnoweXQpwdloncFlAgWQbSbCblvOi';
 $db_name = getenv('MYSQLDATABASE') ?: 'railway';
 
 try {
