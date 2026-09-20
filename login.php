@@ -47,7 +47,7 @@ try {
     // STEPS 1 & 2: DATABASE CHECK & RESERVATION
     // ==========================================
     $pdo->beginTransaction();
-    $stmt = $pdo->prepare("SELECT id, voucher_code FROM vouchers WHERE price_tier = :amount AND status = 'available' LIMIT 1 FOR UPDATE");
+    $stmt = $pdo->prepare("SELECT id, voucher_code FROM wifi_vouchers WHERE price_tier = :amount AND status = 'available' LIMIT 1 FOR UPDATE");
     $stmt->execute(['amount' => $amount]);
     $voucher = $stmt->fetch();
     
@@ -90,7 +90,7 @@ try {
         }
 
         // 2. Update status and log the customer phone number seamlessly
-        $updateStmt = $pdo->prepare("UPDATE vouchers SET status = 'assigned', assigned_at = NOW(), transaction_id = :tx_id, customer_phone = :phone WHERE id = :id");
+        $updateStmt = $pdo->prepare("UPDATE wifi_vouchers SET status = 'assigned', assigned_at = NOW(), transaction_id = :tx_id, customer_phone = :phone WHERE id = :id");
         $updateStmt->execute([
             'tx_id' => $internal_tx_id,
             'phone' => $phone,
@@ -135,7 +135,7 @@ try {
         elseif (isset($auth_data['accessToken'])) { $access_token = $auth_data['accessToken']; }
         
         if (!$access_token) {
-            $revertStmt = $pdo->prepare("UPDATE vouchers SET status = 'available', assigned_at = NULL, transaction_id = NULL WHERE id = :id");
+            $revertStmt = $pdo->prepare("UPDATE wifi_vouchers SET status = 'available', assigned_at = NULL, transaction_id = NULL WHERE id = :id");
             $revertStmt->execute(['id' => $voucher_id]);
             throw new Exception("AzamPay Authentication Failed. Raw Sandbox Error: " . ($auth_response ?: 'No Server Response'));
         }
@@ -185,7 +185,7 @@ try {
             $payment_triggered = true;
         } else {
             // Revert voucher if handshake fails
-            $revertStmt = $pdo->prepare("UPDATE vouchers SET status = 'available', assigned_at = NULL, transaction_id = NULL, customer_phone = NULL WHERE id = :id");
+            $revertStmt = $pdo->prepare("UPDATE wifi_vouchers SET status = 'available', assigned_at = NULL, transaction_id = NULL, customer_phone = NULL WHERE id = :id");
             $revertStmt->execute(['id' => $voucher_id]);
             
             if ($httpStatusCode === 0) {
