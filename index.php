@@ -12,7 +12,7 @@ $db_name = getenv('MYSQLDATABASE') ?: 'railway';
 
 // 2. CAPTURE DATA SENT FROM INDEX.PHP
 $phone  = isset($_POST['customer_phone']) ? trim($_POST['customer_phone']) : '';
-$amount = isset($_POST['amount']) ? trim($_POST['amount']) : '1000'; 
+$amount = isset($_POST['amount']) ? trim($_POST['amount']) : ''; 
 $amount = str_replace(',', '', $amount);
 
 if (substr($phone, 0, 1) === '0') {
