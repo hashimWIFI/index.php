@@ -9,10 +9,10 @@
 
 $railway_webhook_url = "https://indexphp-production.up.railway.app/callback.php";  
 // 1b. DYNAMIC DATABASE LOOKUP (Finds the newest pending transaction automatically)
-$db_host = getenv('MYSQLHOST') ?: 'mysql.railway.internal';
+$db_host = getenv('MYSQLHOST') ?: 'mysql-178d.railway.internal';
 $db_port = getenv('MYSQLPORT') ?: '3306';
 $db_user = getenv('MYSQLUSER') ?: 'root';
-$db_pass = getenv('MYSQLPASSWORD') ?: 'LHbSnoweXQpwdloncFlAgWQbSbCblvOi';
+$db_pass = getenv('MYSQLPASSWORD') ?: 'NkoJxOMxdXHlFneNdOdMkTDoUNhbDemi';
 $db_name = getenv('MYSQLDATABASE') ?: 'railway';
 
 try {
