@@ -53,10 +53,6 @@ try {
     
     if (!$voucher) {
 
-
-
-
-
         $pdo->rollBack();
         $error_message = "Samahani, mtambo umeshindwa kuchakata vocha za TZS " . number_format($amount) . " kwa sasa. Tafadhali jaribu kifurushi kingine.";
     } else {
