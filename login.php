@@ -90,7 +90,7 @@ try {
         }
 
         // 2. Update status and log the customer phone number seamlessly
-        $updateStmt = $pdo->prepare("UPDATE wifi_vouchers SET status = 'pending', purchased_at = NOW(), transaction_id = :tx_id, customer_phone = :phone WHERE id = :id");
+        $updateStmt = $pdo->prepare("UPDATE wifi_vouchers SET status = 'pending', purchased_at = NOW(), transaction_id = :tx_id, assigned_phone = :phone WHERE id = :id");
         $updateStmt->execute([
             'tx_id' => $internal_tx_id,
             'phone' => $phone,
