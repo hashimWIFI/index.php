@@ -4,10 +4,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // 1. DATABASE CONFIGURATION (Pulls from your Railway Environment Variables) 
-$db_host = getenv('MYSQLHOST') ?: 'mysql.railway.internal';
+$db_host = getenv('MYSQLHOST') ?: 'mysql-178d.railway.internal';
 $db_port = getenv('MYSQLPORT') ?: '3306'; 
 $db_user = getenv('MYSQLUSER') ?: 'root';
-$db_pass = getenv('MYSQLPASSWORD') ?: 'uGMtUbozFJJSnBszScvdokEShYJWoMDn'; 
+$db_pass = getenv('MYSQLPASSWORD') ?: 'LHbSnoweXQpwdloncFlAgWQbSbCblvOi'; 
 $db_name = getenv('MYSQLDATABASE') ?: 'railway';
 
 // 2. CAPTURE DATA SENT FROM INDEX.PHP
